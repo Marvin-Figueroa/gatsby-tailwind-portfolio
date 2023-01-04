@@ -1,0 +1,111 @@
+[
+  {
+    "title": "Registration Form & Konami Code",
+    "slug": "registration-form-&-konami-code",
+    "description": "The project consists of two phases, the first one is about creating a responsive form and validating its fields using JavaScript, if the data in the fields is correct then it should be printed in the console otherwise the corresponding error messages should appear on the form fields, the second phase is about adding a konami-code functionality to the page containing the form, which will show an animated gif in the center of the page when the user presses the correct sequence of keys.",
+    "thumbnail": "./images/project-1/thumbnail.png",
+    "images": [
+      "./images/project-1/screenshot-1.png",
+      "./images/project-1/screenshot-2.png"
+    ],
+    "stack": ["HTML", "CSS", "JavaScript"],
+    "demo": "https://homework-week-1.vercel.app/"
+  },
+  {
+    "title": "News App",
+    "slug": "news-app",
+    "description": "The project consists of using The Guardian API to create a single page news app that displays the content fetched from the API in a grid of cards and allows the user to filter the news using some parameters.",
+    "thumbnail": "./images/project-2/thumbnail.png",
+    "images": [
+      "./images/project-2/screenshot-1.png",
+      "./images/project-2/screenshot-2.png"
+    ],
+    "stack": ["HTML", "JavaScript", "CSS"],
+    "demo": "https://homework-week-2-mocha.vercel.app/"
+  },
+  {
+    "title": "Nintendo Characters Blog",
+    "slug": "nintendo-characters-blog",
+    "description": "The project consists of deploying json-server to the glitch platform and using it as a backend to interact with the post's data stored in the db.json file by creating a frontend app that allows the user to search for blog posts about Nintendo's characters by title and by tags, also view the details of a particular post and be able to modify it and add likes to it.",
+    "thumbnail": "./images/project-3/thumbnail.png",
+    "images": [
+      "./images/project-3/screenshot-1.png",
+      "./images/project-3/screenshot-2.png",
+      "./images/project-3/screenshot-3.png"
+    ],
+    "stack": ["HTML", "JavaScript", "CSS", "Design Patterns", "JSON Server"],
+    "demo": "https://homework-week-3.vercel.app/"
+  },
+  {
+    "title": "Videogames Info Website",
+    "slug": "videogames-info-website",
+    "description": "The project consists of creating a website for a video game store using ReactJS and deploying json-server to the glitch platform to use it as a backend to interact with the game's data stored in the db.json file. The website must allow the user to view the list of games using pagination, also view the details of a particular game and its comments if there are any.",
+    "thumbnail": "./images/project-4/thumbnail.png",
+    "images": [
+      "./images/project-4/screenshot-1.png",
+      "./images/project-4/screenshot-2.png"
+    ],
+    "stack": ["HTML", "JavaScript", "JSON Server", "SASS", "React"],
+    "demo": "https://homework-week-4.vercel.app/"
+  },
+  {
+    "title": "Enhanced Videogames Info Website",
+    "slug": "enhanced-videogames-info-website",
+    "description": "The project consists of creating a website for a video game store using ReactJS with TypeScript and deploying json-server to the glitch platform to use it as a backend to interact with the game's data (comments and users) stored in the db.json file as well as the game data from the RAWG Games API. The website must allow the user to view the list of games (fetched from the RAWG API) using pagination, search for particular games using a search bar and also view the details of a particular game and its comments if there are any, as well as log in using localStorage to save/retrieve/remove the credentials in order to add comments to any game.",
+    "thumbnail": "./images/project-5/thumbnail.png",
+    "images": [
+      "./images/project-5/screenshot-1.png",
+      "./images/project-5/screenshot-2.png",
+      "./images/project-5/screenshot-3.png",
+      "./images/project-5/screenshot-4.png",
+      "./images/project-5/screenshot-5.png"
+    ],
+    "stack": [
+      "HTML",
+      "TypeScript",
+      "JSON Server",
+      "SASS",
+      "React",
+      "React Router"
+    ],
+    "demo": "https://homework-week-5.vercel.app/"
+  },
+  {
+    "title": "Color's Matrix & TicTacToe",
+    "slug": "colors-matrix-&-tictactoe",
+    "description": "The project consist of two phases:\n\nThe first phase is about building a custom hook that can keep track of state changes and use it to create a matrix of colored squares which can be individually selected by the user and the order in which the user picked the colors is remembered in order for the user to be able to go backwards and forwards in time with their selected colors.\n\nThe second phase is about building a tic-tac-toe board game which allows move travelling and replaying the game when a winner is determined.",
+    "thumbnail": "./images/project-6/thumbnail.png",
+    "images": [
+      "./images/project-6/screenshot-1.png",
+      "./images/project-6/screenshot-2.png",
+      "./images/project-6/screenshot-3.png",
+      "./images/project-6/screenshot-4.png",
+      "./images/project-6/screenshot-5.png",
+      "./images/project-6/screenshot-6.png"
+    ],
+    "stack": ["HTML", "TypeScript", "SASS", "React", "React Router"],
+    "demo": "https://homework-week-7.vercel.app/"
+  },
+  {
+    "title": "Marvel World Website",
+    "slug": "marvel-world-website",
+    "description": "The project consist of consuming the Marvel API and create pages to show the master/detail of the Characters, Comics and Stories resources. Add filtering functionality in every resource displayed and the possibility to bookmark/unbookmark every resource item, as well as the possibility to hide/expose every resource item from all pages.",
+    "thumbnail": "./images/project-7/thumbnail.png",
+    "images": [
+      "./images/project-7/screenshot-1.png",
+      "./images/project-7/screenshot-2.png",
+      "./images/project-7/screenshot-3.png",
+      "./images/project-7/screenshot-4.png"
+    ],
+    "stack": [
+      "HTML",
+      "TypeScript",
+      "SASS",
+      "React",
+      "React Router",
+      "Redux",
+      "Axios"
+    ],
+    "demo": "https://homework-week-8.vercel.app/"
+  }
+]
