@@ -3,6 +3,18 @@ import React, { useState } from 'react';
 import Layout from '../../components/layout';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import type { IGatsbyImageData } from 'gatsby-plugin-image';
+import { FaCss3Alt, FaHtml5, FaReact, FaSass } from 'react-icons/fa';
+import { SiJavascript, SiRedux, SiTypescript } from 'react-icons/si';
+
+const icons = {
+  React: <FaReact title='React' />,
+  JavaScript: <SiJavascript title='JavaScript' />,
+  CSS: <FaCss3Alt title='Cascading Style Sheets' />,
+  HTML: <FaHtml5 title='HTML5' />,
+  SASS: <FaSass title='SASS' />,
+  Redux: <SiRedux title='Redux' />,
+  TypeScript: <SiTypescript title='TypeScript' />,
+};
 
 interface DataShape {
   data: {
@@ -41,14 +53,16 @@ export default function Projects({ data }: DataShape) {
   }
 
   return (
-    <Layout>
-      <h2>Projects & Websites I've created</h2>
+    <Layout className='flex flex-col gap-8 items-center p-8 text-center'>
+      <h2 className='text-red-400 text-2xl font-bold'>
+        Some of the Projects & Websites I've created
+      </h2>
       <div className='flex justify-center items-center flex-wrap gap-3'>
         {tags.map((tag, index) => (
           <button
             className={`font-bold py-2 px-4 rounded ${
               tag === selectedTag
-                ? 'bg-red-500 hover:bg-red-700 text-white'
+                ? 'bg-green-500 hover:bg-green-600 text-white'
                 : 'bg-white hover:bg-gray-100 text-gray-800 border border-gray-400'
             }`}
             type='button'
@@ -58,20 +72,29 @@ export default function Projects({ data }: DataShape) {
           </button>
         ))}
       </div>
-      <section>
+      <section className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
         {filteredProjects.map((project) => (
-          <Link key={project.id} to={`/projects/${project.slug}`}>
-            <GatsbyImage
-              image={project.thumbnail.childImageSharp.gatsbyImageData}
-              alt='project thumbnail'
-            />
-            <h3>{project.title}</h3>
-            <div>
-              {project.stack.map((item) => (
-                <span>{item}</span>
-              ))}
-            </div>
-          </Link>
+          <article className='max-w-sm rounded overflow-hidden shadow-2xl'>
+            <Link key={project.id} to={`/projects/${project.slug}`}>
+              <GatsbyImage
+                image={project.thumbnail.childImageSharp.gatsbyImageData}
+                alt='project thumbnail'
+                className='w-full h-48 object-cover'
+              />
+              <div className='px-6 py-4'>
+                <h3 className='font-bold text-green-500 text-xl mb-2'>
+                  {project.title}
+                </h3>
+              </div>
+              <div className='px-6 pt-2 pb-2'>
+                {project.stack.map((item) => (
+                  <span className='inline-block bg-gray-200 rounded-full px-3 py-1 text-2xl mr-2 mb-2'>
+                    {icons[item]}
+                  </span>
+                ))}
+              </div>
+            </Link>
+          </article>
         ))}
       </section>
     </Layout>
@@ -96,25 +119,3 @@ export const query = graphql`
     }
   }
 `;
-
-// query allUniqueTags {
-//   allProjectsJson {
-//     distinct(field: {stack: SELECT})
-//   }
-// }
-
-// query ProjectsByTag($tag: [String!]) {
-//   allProjectsJson(filter: {stack: {in: $tag}}) {
-//     nodes {
-//       title
-//         slug
-//         id
-//         stack
-//         thumbnail {
-//           childImageSharp {
-//             gatsbyImageData
-//           }
-//         }
-//     }
-//   }
-// }
