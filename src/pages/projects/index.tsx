@@ -1,4 +1,4 @@
-import { graphql, Link } from 'gatsby';
+import { graphql, HeadFC, Link } from 'gatsby';
 import React, { useState } from 'react';
 import Layout from '../../components/layout';
 import { GatsbyImage } from 'gatsby-plugin-image';
@@ -119,3 +119,5 @@ export const query = graphql`
     }
   }
 `;
+
+export const Head: HeadFC = () => <title>Projects</title>;
