@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
-import { FaBars } from 'react-icons/fa';
+import { FaBars, FaLeaf, FaTimes } from 'react-icons/fa';
+import { useState } from 'react';
 
 interface LayoutProps {
   children?: React.ReactNode;
@@ -8,30 +9,65 @@ interface LayoutProps {
 }
 
 const Layout = ({ children, className }: LayoutProps) => {
+  const [isCollapsed, setIsCollapsed] = useState(true);
   return (
-    <div className='lg:container lg:mx-auto font-sans'>
-      <header className='flex items-center justify-between px-4 py-3'>
-        <h1 className='text-green-400 font-bold text-xl'>Marvin@Figueroa</h1>
-        <nav className='flex text-green-400'>
-          <button className='text-green-400 hover:text-green-600 focus:text-green-600 md:hidden'>
-            <FaBars />
-          </button>
-          <ul className='flex items-center justify-between gap-x-8 font-bold'>
-            <li>
-              <Link to='/'>Home</Link>
-            </li>
-            <li>
-              <Link to='/projects'>Projects</Link>
-            </li>
-            <li>
-              <Link to='/contact'>Contact</Link>
-            </li>
-          </ul>
+    <>
+      <header className='bg-red-400 text-white'>
+        <nav className='container-xl  sm:flex sm:items-center sm:justify-between sm:pr-8'>
+          <div className='flex items-center justify-between px-8 py-2'>
+            <FaLeaf
+              className='text-4xl text-white hover:text-gray-600'
+              title='Yes, just a leaf'
+            />
+            <button
+              onClick={() =>
+                setIsCollapsed((prevIsCollapsed) => !prevIsCollapsed)
+              }
+              type='button'
+              className='sm:hidden text-white focus:text-gray-600 focus:outline-none'>
+              <span className='sr-only'>Open main menu</span>
+              {isCollapsed ? (
+                <FaBars className='text-3xl text-white hover:text-gray-600' />
+              ) : (
+                <FaTimes className='text-3xl text-white hover:text-gray-600' />
+              )}
+            </button>
+          </div>
+          <div
+            className={`${
+              isCollapsed ? 'hidden' : 'block'
+            } sm:block text-center bg-gray-500 sm:bg-transparent`}>
+            <ul className='sm:flex sm:gap-x-4 sm:items-center'>
+              <li>
+                <Link
+                  to='/'
+                  className='font-semibold py-2 block sm:inline sm:py-0 text-lg hover:bg-gray-600 sm:hover:text-gray-600 sm:hover:bg-transparent border-b-2 sm:border-b-0'>
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to='/projects'
+                  className='font-semibold   block py-2 text-lg hover:bg-gray-600 sm:hover:text-gray-600 sm:hover:bg-transparent border-b-2 sm:border-b-0'>
+                  Projects
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to='/contact'
+                  className='font-semibold  block py-2 text-lg hover:bg-gray-600 sm:hover:text-gray-600 sm:hover:bg-transparent border-b-2 sm:border-b-0'>
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
         </nav>
       </header>
       <main className={className}>{children}</main>
-      <footer className='text-center'>Marvin Figueroa &copy; 2023</footer>
-    </div>
+      <footer className='text-center font-bold py-4'>
+        Marvin Figueroa &copy; 2023
+      </footer>
+    </>
   );
 };
 
