@@ -33,7 +33,7 @@
       "./images/project-3/screenshot-2.png",
       "./images/project-3/screenshot-3.png"
     ],
-    "stack": ["HTML", "JavaScript", "CSS", "Design Patterns", "JSON Server"],
+    "stack": ["HTML", "JavaScript", "CSS"],
     "demo": "https://homework-week-3.vercel.app/"
   },
   {
@@ -45,7 +45,7 @@
       "./images/project-4/screenshot-1.png",
       "./images/project-4/screenshot-2.png"
     ],
-    "stack": ["HTML", "JavaScript", "JSON Server", "SASS", "React"],
+    "stack": ["HTML", "JavaScript", "SASS", "React"],
     "demo": "https://homework-week-4.vercel.app/"
   },
   {
@@ -60,14 +60,7 @@
       "./images/project-5/screenshot-4.png",
       "./images/project-5/screenshot-5.png"
     ],
-    "stack": [
-      "HTML",
-      "TypeScript",
-      "JSON Server",
-      "SASS",
-      "React",
-      "React Router"
-    ],
+    "stack": ["HTML", "TypeScript", "SASS", "React"],
     "demo": "https://homework-week-5.vercel.app/"
   },
   {
@@ -83,7 +76,7 @@
       "./images/project-6/screenshot-5.png",
       "./images/project-6/screenshot-6.png"
     ],
-    "stack": ["HTML", "TypeScript", "SASS", "React", "React Router"],
+    "stack": ["HTML", "TypeScript", "SASS", "React"],
     "demo": "https://homework-week-7.vercel.app/"
   },
   {
@@ -97,15 +90,7 @@
       "./images/project-7/screenshot-3.png",
       "./images/project-7/screenshot-4.png"
     ],
-    "stack": [
-      "HTML",
-      "TypeScript",
-      "SASS",
-      "React",
-      "React Router",
-      "Redux",
-      "Axios"
-    ],
+    "stack": ["HTML", "TypeScript", "SASS", "React", "Redux"],
     "demo": "https://homework-week-8.vercel.app/"
   }
 ]
