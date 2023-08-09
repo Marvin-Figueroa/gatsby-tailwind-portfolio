@@ -1,8 +1,8 @@
-# Homework Week 10
+# Gatsby - Tailwind - Portfolio
 
 ## Description
 
-The project consist of creating a portfolio website using Gatsby and Tailwind to show information about me, the list of projects that I have built, the details of each of those projects and a contact page to show my contact information. As well as the possibility to filter the projects in the project's page based on their tech-stack tags.
+The project consist of creating a portfolio website using Gatsby and Tailwind to show information about me, the list of projects that I have built, the details of each one of those projects and a contact page to show my contact information. As well as the possibility to filter the projects in the project's page based on their tech-stack tags.
 
 ## Live Site
 
